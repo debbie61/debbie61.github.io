@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fab Gadget Ltd.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <style>
+      /* Mobile navigation */
+      #navMenu {
+        display: none;
+      }
+      #navMenu.show {
+        display: block;
+      }
+
+      /* Scroll to top button */
+      #scrollToTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none;
+      }
+
+      #scrollToTopBtn:hover {
+        background-color: #555;
+      }
+
+      /* Modal Styles */
+      .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 4px;
+        position: relative;
+      }
+      .close {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      /* Carousel styles */
+      .carousel-slide {
+        display: none;
+        transition: opacity 1s ease;
+      }
+      .carousel-slide.visible {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This section is the header of the webpage -->
+    <header>
+      <img src="//dom.sandwell.ac.uk/Student/HomeEven/712770/Fab%20Gadget%20Ltd/HTML%20Example/images/portfolio%20logo.jpg" alt="logo" width="100px" height="100px">
+      <h1>Fab Gadget Ltd.</h1>
+      <h2>Delivering quality and innovative robotics to your home</h2>
+    </header>
+
+    <!-- This section is the navigation bar -->
+    <nav>
+      <button onclick="toggleMenu()">☰</button>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Case Studies.html">Case Studies</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- This is the main content area of the page -->
+    <main>
+      <h1>&lt;PORTFOLIO&gt;</h1>
+
+      <p>My name is Deborah and I am a dedicated T Level computer student with a passion for technology and innovation...</p>
+      <!-- Example of how to implement modal pop-up -->
+      <button onclick="openModal()">Open Portfolio</button>
+      <!-- The Modal -->
+      <div id="myModal" style="display: none;">
+        <div class="modal-content">
+          <span onclick="closeModal()" class="close">&times;</span>
+          <h2>Personal Statement:
+
+Ever since I was introduced to computers at a young age, I have been fascinated by their ability to solve complex problems and transform ideas into tangible solutions. This curiosity evolved into a strong determination to pursue a career in technology. Through my T Level studies, I have developed a robust skill set in coding, data analysis, and network management, and have learned the importance of continuous learning and adaptability in an ever-changing digital landscape. I thrive in collaborative environments and value the opportunity to work on projects that challenge my problem-solving abilities and creativity. My portfolio is a reflection of my journey—one marked by perseverance, innovation, and a commitment to excellence. I am excited to contribute my skills to meaningful projects that drive progress and make a positive impact in the world of technology
+</h2>
+          <p>     1. Project Overview
+   • Project Title: "Smart Waste Management System"
+   • Context: This was a college assignment for my final year project in Computer Science.
+   • Brief Description: The project focuses on developing an IoT-based waste management system that uses sensors to monitor waste levels in bins. I chose this project to address the growing problem of waste management in urban areas and to explore IoT applications.
+
+<p>2. Goals & Challenges
+   • Problem Statement: Urban areas face challenges with inefficient waste collection, leading to overflowing bins and increased pollution.
+   • Objectives: Key goals included reducing collection costs, optimizing routes for waste collection, and providing real-time data to waste management authorities.
+   • Constraints or Limitations: The project was limited by a tight deadline of three months and a budget of £500 for materials and software.</p>
+
+
+<p>3. Approach / Methodology
+   • Planning: I created a project roadmap that outlined each phase, including research, design, development, and testing.
+   • Research: I conducted background research on existing waste management systems and gathered user feedback through surveys to identify key features.
+   • Tools & Technologies: The project utilized Arduino for hardware, Python for backend development, and a web application built with React for the user interface.
+   • Process: The workflow included brainstorming ideas, creating prototypes, coding the system, and conducting multiple rounds of testing to ensure functionality.</p>
+
+<p>4. Implementation Details
+   • Key Features:
+     • Feature 1: Real-time monitoring of waste levels using ultrasonic sensors.
+     • Feature 2: Automated notifications for collection when bins are full.
+     • Feature 3: Route optimization for collection trucks based on bin status.
+   • Technical Challenges: A significant hurdle was integrating the sensors with the microcontroller. I overcame this by troubleshooting the wiring and reviewing the sensor documentation.</p>
+
+<p>5. Results & Outcomes
+   • Achievements: The project met its objectives, with a successful prototype that demonstrated a 40% reduction in unnecessary collection trips.
+   • User Feedback / Testing: User testing revealed a 90% satisfaction rate among participants, highlighting ease of use and effectiveness.
+   • Impact: The solution simplified the waste collection process, reduced operational costs, and improved overall efficiency in waste management.</p>
+
+<p>6. Reflection & Future Work
+   • Reflection: This project enhanced my skills in IoT and software development. I learned the importance of user feedback in the design process.
+   • Future Work: For future iterations, I plan to incorporate machine learning algorithms for predictive analysis of waste generation patterns
+</p>
+        </div>
+      </div>
+
+      <!-- Carousel for portfolio images -->
+      <div class="carousel">
+        <div class="carousel-slide visible">
+          <img src="images/coding image.jpg" alt="Project Image 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/case study.jpg" alt="Project Image 2">
+        </div>
+       <div class="carousel-slide">
+          <img src="images/web image.jpg" alt="Project Image 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/software image.jpg" alt="Project Image 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/cyber.jpg" alt="Project Image 2">
+        </divclass="carousel-slide">
+        <img src="images/data.jpg" alt="Project Image 2">
+        </div>
+
+
+        <!-- Add more slides as needed -->
+      </div>
+
+      <!-- Simple Form Example with Validation -->
+      <h3>Contact Form</h3>
+      <form onsubmit="return validateForm()">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <!-- This is the footer -->
+    <footer>
+      <ul id="social">
+        <li><a href="https://www.facebook.com">Like us on Facebook!</a></li>
+        <li><a href="https://www.tiktok.com">Like us on Tiktok!</a></li>
+        <li><a href="https://www.youtube.com">Like us on Youtube!</a></li>
+      </ul>
+      <ul id="legal">
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Toggle navigation menu on mobile
+      function toggleMenu() {
+        var menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Form Validation
+      function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        if (name == "" || email == "" || message == "") {
+          alert("All fields must be filled out.");
+          return false;
+        }
+
+        // Email validation
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email address.");
+          return false;
+        }
+
+        return true;
+      }
+
+      // Scroll to Top Button
+      window.onscroll = function() {
+        var button = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Modal Popup
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+
+      // Image Carousel
+      var currentSlide = 0;
+
+      function nextSlide() {
+        var slides = document.querySelectorAll('.carousel-slide');
+        slides[currentSlide].classList.remove('visible');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('visible');
+      }
+
+      setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+  </body>
+</html>
