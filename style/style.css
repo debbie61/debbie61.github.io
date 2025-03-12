@@ -60,3 +60,90 @@ footer ul#social {
 footer ul#legal {
   float: left;
 }
+
+/* Responsive styles */
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  /* Mobile Navigation */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+  }
+  nav ul.show {
+    display: flex;
+  }
+
+  /* Mobile header */
+  header h1 {
+    font-size: 1.8em;
+  }
+  
+  header h2 {
+    font-size: 1.2em;
+  }
+
+  /* Adjusting font size for mobile */
+  main {
+    font-size: 1em;
+  }
+
+  /* Footer adjustments for mobile */
+  footer {
+    font-size: 0.9em;
+  }
+
+  /* Scroll to Top button */
+  #scrollToTopBtn {
+    display: block;
+  }
+
+  /* Responsive image */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust social and legal list for small screens */
+  footer ul#social, footer ul#legal {
+    float: none;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* Smaller screens (phones) */
+@media only screen and (max-width: 480px) {
+  /* Smaller screens (phones) */
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  header h2 {
+    font-size: 1em;
+  }
+
+  /* Main content adjustments for very small screens */
+  main {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+}
+
+/* Scroll to top button */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555;
+}
